@@ -1,0 +1,11 @@
+%h1 Top#index
+%p Find me in app/views/top/index.html.erb
+%p Hello World!
+
+- if flash.present?
+  %p.alert= flash[:alert]
+
+- if session[:customer_id].present?
+  %p.success login!
+- else
+  = render 'login_form'
